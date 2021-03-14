@@ -17,5 +17,11 @@ public class Main {
         System.out.println("La multiplicacion es: " + op.multiplicar(n1, n2)); 
         System.out.println("La divison es:  " + op.dividir(n1, n2)); 
         
+        
+        //objeto de la clase persona
+        Persona p1 = new Persona("Enrique", 25);
+        
+        p1.mostrarDatos();
+        
     }  
 }
