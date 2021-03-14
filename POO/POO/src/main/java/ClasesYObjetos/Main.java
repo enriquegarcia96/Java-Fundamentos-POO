@@ -12,12 +12,10 @@ public class Main {
         
         Operacion op = new Operacion();
         
-        op.sumar(n1,n2);
-        op.restar(n1, n2);
-        op.multiplicar(n1, n2);
-        op.dividir(n1, n2);
-        
-        op.mostrarResultados();
+        System.out.println("La suma es: " + op.sumar(n1,n2)); 
+        System.out.println("La resta es: "+ op.restar(n1, n2));
+        System.out.println("La multiplicacion es: " + op.multiplicar(n1, n2)); 
+        System.out.println("La divison es:  " + op.dividir(n1, n2)); 
         
     }  
 }
