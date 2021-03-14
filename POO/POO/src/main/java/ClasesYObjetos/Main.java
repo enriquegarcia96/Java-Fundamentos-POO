@@ -8,8 +8,7 @@ public class Main {
         
         int n1 = Integer.parseInt(JOptionPane.showInputDialog("digite un numero:"));
         int n2 = Integer.parseInt(JOptionPane.showInputDialog("digite un numero:"));
-        
-        
+  
         Operacion op = new Operacion();
         
         System.out.println("La suma es: " + op.sumar(n1,n2)); 
@@ -17,11 +16,17 @@ public class Main {
         System.out.println("La multiplicacion es: " + op.multiplicar(n1, n2)); 
         System.out.println("La divison es:  " + op.dividir(n1, n2)); 
         
-        
         //objeto de la clase persona
         Persona p1 = new Persona("Enrique", 25);
         
-        p1.mostrarDatos();
+        //p1.mostrarDatos();
+        
+        
+        Persona persona1 = new Persona("Enrique", 25);
+        persona1.correr();
+        
+        Persona persona2 = new Persona("37172198");
+        persona2.correr(100);
         
     }  
 }

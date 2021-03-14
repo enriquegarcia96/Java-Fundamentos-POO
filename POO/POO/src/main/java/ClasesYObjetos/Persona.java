@@ -7,20 +7,28 @@ public class Persona {
     //Atributos
     String nombre;
     int edad;
+    String dni;
     
     //Metodos
-    
-    
-    //Metodo Constructor
-    public Persona( String _nombre, int _edad ){
-        nombre = _nombre;
-        edad = _edad;
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
     }
     
+    public Persona(String dni) {
+        this.dni = dni;
+    }
     
-    public void mostrarDatos (){
-        System.out.println("El nombre es: " +nombre);
-        System.out.println("La edad es: " +edad);
+    public void correr (){
+        System.out.println("Soy "+ nombre+", tengo "+edad+" años y estoy corriendo una maraton");
         
     }
+    
+    public void correr( int km ){
+            System.out.println("He corrido "+km+" kilometros");
+    }
+    
+    
+    
+    
 }
