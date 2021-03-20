@@ -83,12 +83,42 @@ public class Principal {
                         cantidad = entrada.nextDouble();
                         
                         cliente.ingresar_dinero(indiceCuenta, cantidad);
-                        System.out.println("\nLIngreso realizado correctamente");
+                        System.out.println("\nIngreso realizado correctamente");
                         System.out.println("Saldo disponible: "+cliente.consultar_saldo(indiceCuenta));
                     }
-                break;
+                    break;
+                case 2: System.out.println("\nDigite el numero de cuenta: ");
+                        numeroCuenta = entrada.nextInt();
+                        indiceCuenta = buscarNumeroCuenta(cuentas, numeroCuenta);
+                        if (indiceCuenta == -1) {
+                            System.out.println("\nEl numero de cuenta ingresado no Existe!");
+                        }else{
+                            System.out.println("\nDigite la cantidad de dinero que desea retirar: ");
+                            cantidad = entrada.nextDouble();
+                            
+                            
+                            if(cantidad > cliente.consultar_saldo(indiceCuenta)){
+                                System.out.println("\nSaldo insuficiente");
+                            }else{
+                                cliente.retirar_dinero(indiceCuenta, cantidad);
+                                System.out.println("\nRetiro realizado correctamente");
+                                System.out.println("Saldo disponible: "+cliente.consultar_saldo(indiceCuenta));
+                            }
+                        }
+                        break;
+                case 3: System.out.println("\nDigite el numero de cuenta: ");
+                        numeroCuenta = entrada.nextInt();
+                        indiceCuenta = buscarNumeroCuenta(cuentas, numeroCuenta);
+                        if (indiceCuenta == -1) {
+                            System.out.println("\nEl numero de cuenta ingresado no Existe!");
+                        }else{
+                            System.out.println("Saldo disponible: "+cliente.consultar_saldo(indiceCuenta));
+                        }
+                    break;
+                case 4: break;
+                default: System.out.println("Error, se confundio de opcion de menu");
             }
-            
+            System.out.println("");
         }while( opcion !=4 );
         
     }
